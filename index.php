@@ -86,7 +86,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <h5 class="modal-title" id="editModalLabel">Edit Note</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="/crud/index.php" method="post">
+      <form action="/index.php" method="post">
       <div class="modal-body">
           <input type="hidden" id="snoEdit" name="snoEdit">
         <div class="mb-3">
@@ -178,7 +178,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     ?>
     <div class="container my-4">
-      <form action="/crud/index.php" method="post">
+      <form action="/index.php" method="post">
         <div class="mb-3">
         <h2>Add a Note</h2>
           <label for="title" class="form-label">Title</label>
@@ -263,7 +263,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
           sno = e.target.id.substr(1,);
           if(confirm("re you sure you want to delete this note!!")){
             console.log("yes");
-            window.location = `/crud/index.php?delete=${sno}`;
+            window.location = `/index.php?delete=${sno}`;
           }
           else{
             console.log("no");
